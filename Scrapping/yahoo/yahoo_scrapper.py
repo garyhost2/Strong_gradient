@@ -15,9 +15,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 # -------------------------------------------------------------------
 # MongoDB Configuration
 # -------------------------------------------------------------------
-MONGO_URI = "mongodb://localhost:27017/"   # Adjust as needed
-DB_NAME = "finance_db"                     # Your DB name
-COLLECTION_NAME = "company_urls"           # Collection with URL docs
+MONGO_URI = "mongodb://localhost:27017/"   
+DB_NAME = "finance_db"                     
+COLLECTION_NAME = "company_urls"           
 
 # -------------------------------------------------------------------
 # Scraping Configuration

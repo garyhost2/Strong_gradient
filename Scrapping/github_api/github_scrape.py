@@ -4,8 +4,10 @@ import json
 import time
 import base64
 from aiohttp import ClientSession
+import os
 from flask import Flask, jsonify, request
-
+from dotenv import load_dotenv
+load_dotenv()
 # Define Web3 and sustainability-related keywords for filtering
 WEB3_KEYWORDS = ['web3', 'ethereum', 'blockchain', 'cryptocurrency', 'defi', 'nft', 'dapp', 'dao', 'smartcontract', 'zkp', 'polkadot', 'ipfs', 'cosmos', 'decentralized', 'cryptography']
 SUSTAINABILITY_KEYWORDS = ['sustainability', 'energy', 'carbon', 'environment', 'efficiency', 'renewable', 'green', 'eco', 'offset', 'proof-of-stake', 'energy-efficient', 'carbon-footprint', 'low-carbon', 'eco-friendly']
@@ -13,8 +15,7 @@ SUSTAINABILITY_KEYWORDS = ['sustainability', 'energy', 'carbon', 'environment', 
 # GitHub API URL and token
 GITHUB_API_URL = 'https://api.github.com/search/repositories'
 GITHUB_CONTENTS_API_URL = 'https://api.github.com/repos/{owner}/{repo}/contents/README.md'
-GITHUB_TOKEN = "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"  # Replace with your GitHub token
-
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")  
 # Updated Web3 Best Practices Document with essential keywords
 WEB3_BEST_PRACTICE_DOC = """
 web3, ethereum, blockchain, decentralization, smart contract, defi, dapp, dao, ipfs, zkp, polkadot, cosmos, cryptography, trustless, transparency

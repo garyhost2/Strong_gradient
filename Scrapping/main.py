@@ -28,7 +28,7 @@ logger = logging.getLogger(__name__)
 # --- MIDDLEWARE BASE URL (NGROK, etc.) ---
 NGROK_BASE_URL = "https://b489-196-203-181-122.ngrok-free.app"
 
-# Removed Mongo-specific environment variables and MongoClient initialization
+# Removed Mongo
 # MONGODB_URI = os.getenv("MONGODB_URI", "mongodb://localhost:27017")
 # MONGO_DB_NAME = os.getenv("MONGO_DB_NAME", "mydb")
 # MONGO_COLLECTION = os.getenv("MONGO_COMPANIES_COLLECTION", "companies")
@@ -439,8 +439,7 @@ def main():
     news_articles = run_news_scraper(companies)
     store_news_data_in_neo4j(news_articles)
 
-    # (Optional) Example of updating a 'treated' flag for a particular company
-    # update_company_treated("world of raiders")
+
 
     # 3) GitHub Scraper
     github_repos = run_github_scraper(WEB3_KEYWORDS)

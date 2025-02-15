@@ -84,7 +84,7 @@ Relevant context from knowledge graph:
 
 Please provide a comprehensive response integrating information from the context. Be concise but thorough in your analysis."""
 
-    async def generate_response(self, context: List[Dict[str, Any]], classification: Dict[str, Any]]) -> str:
+    async def generate_response(self, context: List[Dict[str, Any]], classification: Dict[str, Any]) -> str:
         """Generate response using both Qwen 2.5 and DeepSeek R1."""
         if not context:
             return f"No relevant information found for '{classification['label']}'."
